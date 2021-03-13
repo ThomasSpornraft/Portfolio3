@@ -19,10 +19,11 @@ body {
     width: 100vw;
     align-items: center;
     position: relative;
+    justify-content: space-evenly;
 }
 
 .nav__img {
-    margin: 30px 0px;
+    /* margin: 30px 0px; */
     height: 175px;
 }
 .nav__img img {
@@ -36,7 +37,7 @@ body {
 .nav__profiletext {
     color: #aaa;
     text-align: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
 .nav__profiletext h2 {
@@ -72,10 +73,13 @@ body {
     display: none;
 }
 
-.nav__contact ul {
+.nav__contact {
     position: fixed;
     left: 10px;
-    top: 30px;
+    top: 10px;
+}
+
+.nav__contact ul {
     list-style: none;
     color: grey;
 }
@@ -84,31 +88,72 @@ body {
     margin: 6px;
 }
 
-.nav_nav {
-    position: absolute;
-    bottom: 10px;
-    right: -65%;
-}
-
 .nav__nav ul {
-    
     list-style: none;
     color: whitesmoke;
-    transform: rotate(-30deg);
 }
 
 .nav__nav li {
-    width: 200vw;
+    width: 95vw;
     background-color: #123;
-    margin: 3px 0px;
-    padding: 6px;
+    margin: 3px;
+    padding: 5px;
     text-align: center;
-    border-radius: 3px;
     font-size: 1.6rem;
-    
 }
+
+.nav__nav li:first-of-type {
+    border-radius: 10px 10px 0 0 ;
+}
+.nav__nav li:last-of-type {
+    border-radius: 0 0 10px 10px;
+}
+
 
 .nav__impressum {
     color: #234;
     font-size: .8rem;
+    padding-bottom: 5px;
+}
+
+/* Iphone X */
+@media only screen and (min-width: 350px) {
+
+    .nav__img img {
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        padding: 2px;
+        box-shadow: 0 0px 25px red;
+    }
+
+    .nav__profiletext {
+        margin-top: 50px;
+    }
+
+    .nav__profiletext h2 strong,
+    .nav__profiletext h2
+    {
+        font-size: 1.8rem;
+    }
+
+    .nav__profiletext p {
+        font-size: 1rem;
+    }
+    .nav__contact {
+        position: unset;   
+    }
+    .nav__contact ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav__nav li {
+        width: 95vw;
+        background-color: #123;
+        margin: 4px;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.8rem;
+    }
 }
